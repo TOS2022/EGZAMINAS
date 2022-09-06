@@ -1,6 +1,7 @@
 @import url("https://rsms.me/inter/inter.css");
 
 /* 0) BENDRI */
+
 h2 {
   font-weight: 700;
   font-size: 16px;
@@ -31,6 +32,7 @@ a {
   padding: 0;
   background-color: #ffffff;
   font-family: "Inter", sans-serif;
+  
 }
 
 
@@ -76,15 +78,18 @@ header #toggle:checked ~ nav {
   top: 100px;
   right: 32px;
   border-radius: 10px;
-  background-color: #ff3998;
+  background: linear-gradient(#e66465, #9198e5);
 }
 header #toggle:checked ~ nav a {
-  color: #ffffff;
+  color: #555555;
   text-transform: uppercase;
   padding: 16px;
 }
+header #toggle:checked ~ nav a:last-child {
+  color: #FF3998;
+}
 header #toggle:checked ~ nav a:not(:last-child) {
-  border-bottom: 1px solid #ffffff;
+  border-bottom: 1px solid #555555;
 }
 
 
@@ -179,10 +184,16 @@ header #toggle:checked ~ nav a:not(:last-child) {
   line-height: 48px;
   padding: 16px 0;
 }
+
+.showcase .div .nfts{
+  overflow-y: hidden;
+  overflow-x: hidden;
+  padding: 40px 0;
+}
 .showcase .nfts {
   display: flex;
   overflow-y: hidden;
-  overflow-x: auto;
+  overflow-x: hidden;
   padding: 40px 0;
 }
 .showcase .nfts .nft {
@@ -293,7 +304,6 @@ footer {
 footer * {
   margin: 0;
 }
-
 footer .right {
   padding-top: 2px;
 }
@@ -312,7 +322,6 @@ footer .right .media a {
 footer .right .media a:first-child {
   margin-left: 0;
 }
-
 footer .left {
   display: grid;
   grid-template-columns: 50% 50%;
@@ -344,4 +353,202 @@ footer #endstuff div {
   font-size: 20px;
   line-height: 100%;
   padding: 32px 0;
+}
+
+/************************************************* DESKTOP ********************************************************/
+
+@media (min-width: 450px) {
+  .hero {
+    background-size: contain;
+    background-position: top 13px right -20vw;
+  }
+  .footer-upsell {
+    background-position: right 10vw bottom;
+  }
+  footer .bottom-menu .left {
+    padding-right: 0;
+  }
+  footer .bottom-menu .left .footer-nav:not(:last-child) {
+    padding-right: 15px;
+  }
+
+
+/* D.1) HEADERIS */
+  header {
+    padding: 70px 80px;
+  }
+  header .hamburger {
+    display: none;
+  }
+  header nav {
+    display: flex;
+  }
+  header nav a {
+    padding: 0 14px;
+  }
+  header nav a:first-child:last-child {
+    padding-left: 0;
+  }
+  header nav a:last-child {
+    color: #ff3998;
+  }
+
+
+/* D.2) AKIS */
+  .hero {
+    padding: 130px 80px;
+    background-position: top 30px right 2vw;
+    background-size: contain;
+  }
+  .hero .text {
+    width: 44%;
+  }
+  .hero .text h1 {
+    font-size: 96px;
+    line-height: 116px;
+    margin-bottom: 32px;
+  }
+  .hero .text button {
+    margin-top: 41px;
+  }
+
+
+  /* D.3) ORANGE BOX */
+  .upsell {
+    padding: 0 80px;
+    margin-bottom: 80px;
+    margin-top: 70px;
+  }
+  .upsell .wrapper {
+    background-image: url(assets/background.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 0;
+    padding-top: 0;
+    padding-bottom: 64px;
+    border-radius: 16px;
+  }
+  .upsell .wrapper h1 {
+    padding: 0 32px;
+    padding-bottom: 24px;
+    padding-top: 154px;
+  }
+  .upsell .wrapper p {
+    padding: 0 32px;
+  }
+
+
+/* D.4) DIDELI LOGOTIPAI */
+  .press {
+    padding: 40px 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .press .desktop-only {
+    display: block;
+  }
+  .press .logo {
+    width: auto;
+    height: 49px;
+  }
+  .press .logo img {
+    height: 49px;
+  }
+  .press .logo .mobile-only {
+    display: none;
+  }
+
+
+/* D.5) ŽMOGELIUKU AUKCIJONAS */
+  .showcase {
+    padding: 80px;
+    padding-bottom: 0;
+  }
+  .showcase h1 {
+    padding: 0;
+    padding-bottom: 24px;
+  }
+  .showcase .nfts {
+    padding: 56px 0;
+  }
+  .showcase .nfts .nft:last-child {
+    padding-right: 0;
+  }
+
+
+  /* D.6) SKIRTUKAS */
+  .divider {
+    margin: 0 80px;
+  }
+  .divider.large-spacing {
+    margin: 64px 80px;
+  }
+  .divider.transparent {
+    display: none;
+  }
+
+
+/* D.7) FUTERIS */
+  .footer-upsell {
+    padding-top: 56px;
+    padding-bottom: 120px;
+    background-position: right 21vw bottom;
+  }
+  .footer-upsell .text {
+    width: 49%;
+  }
+  .footer-upsell .text h1 {
+    font-size: 56px;
+    margin-bottom: 24px;
+    line-height: 68px;
+  }
+  .footer-upsell .text button {
+    margin-top: 40px;
+  }
+  footer {
+    padding: 0 80px;
+    padding-bottom: 71px;
+  }
+  footer .bottom-menu {
+    display: flex;
+    justify-content: space-between;
+    margin: 120px 0;
+  }
+  footer .bottom-menu .right {
+    padding-top: 0;
+  }
+  footer .bottom-menu .right img {
+    padding-top: 0;
+  }
+  footer .bottom-menu .right p {
+    line-height: 1;
+  }
+  footer .bottom-menu .right div {
+    line-height: 1;
+  }
+  footer .bottom-menu .right div a {
+    margin-bottom: 0;
+  }
+  footer .bottom-menu .left {
+    display: flex;
+    padding: 0;
+    padding-right: 30px;
+  }
+  footer .bottom-menu .left .footer-nav:not(:last-child) {
+    padding-right: 75px;
+  }
+
+
+/* F.8) GALAS */
+  footer #endstuff {
+    display: flex;
+    justify-content: space-between;
+  }
+  footer #endstuff .desktop-only {
+    display: block;
+  }
+  footer #endstuff div {
+    padding: 0;
+  }
 }
