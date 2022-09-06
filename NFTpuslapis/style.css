@@ -76,16 +76,20 @@ header #toggle:checked ~ nav {
   top: 100px;
   right: 32px;
   border-radius: 10px;
-  background-color: #ff3998;
+  background: linear-gradient(#e66465, #9198e5);
 }
 header #toggle:checked ~ nav a {
-  color: #ffffff;
+  color: #555555;
   text-transform: uppercase;
   padding: 16px;
 }
-header #toggle:checked ~ nav a:not(:last-child) {
-  border-bottom: 1px solid #ffffff;
+header #toggle:checked ~ nav a:last-child {
+  color: #FF3998;
 }
+header #toggle:checked ~ nav a:not(:last-child) {
+  border-bottom: 1px solid #555555;
+}
+
 
 
 /* 2) AKIS */
@@ -225,6 +229,7 @@ header #toggle:checked ~ nav a:not(:last-child) {
   font-weight: 400;
   font-size: 18px;
   line-height: 100%;
+
 }
 .showcase .nfts .nft .nft-info .left {
   padding-left: 24px;
